@@ -1,18 +1,26 @@
 import { Switch, Route } from 'react-router-dom';
-import UploadForm from "./form/UploadForm";
+import React, {Component} from "react";
+import Home from './page/Home';
+import UploadForm from "./page/UploadForm";
+import DownloadList from "./page/DownloadList";
 
 
-const Home = () => (
-    <div>
-        <h1>Home Page</h1>
-    </div>
-)
 
-const Main = () => (
-    <main>
-        <Switch>
-            <Route exact path="/" component={Home}/>
-            <Route path="/upload" component={UploadForm}/>
-        </Switch>
-    </main>
-)
+export default class Main extends Component {
+    constructor(props) {
+        super(props);
+    }
+
+
+    render() {
+        return (
+            <main>
+                <div className="content">
+                    <Route exact path="/" component={Home} />
+                    <Route path="/upload" component={UploadForm}/>
+                    <Route path="/downloadlist" component={DownloadList}/>
+                </div>
+            </main>
+        )
+    }
+}

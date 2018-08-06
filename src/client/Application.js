@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 import Main from './Main';
-
+import Header from './Header';
+/*
 const Header = ()=>(
     <Header>
         <nav>
@@ -16,12 +17,11 @@ const Header = ()=>(
         </nav>
     </Header>
 )
-
-export default class App extends Component {
+*/
+export default class Application extends Component {
     constructor(props) {
         super(props);
     }
-
 
     render() {
         return (
